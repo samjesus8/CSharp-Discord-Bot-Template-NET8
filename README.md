@@ -28,7 +28,7 @@ in C#, with many of the different features it can offer. Please watch this tutor
 
 - To use this repository correctly, please refer to the below article to get it setup and working
 
-[Repository Setup](https://github.com/samjesus8/CSharp-Discord-Bot-Template-NET8/blob/master/Docs/repository_setup.md)
+[Repository Setup](https://github.com/samjesus8/CSharp-Discord-Bot-Template-NET8/blob/master/docs/repository_setup.md)
 
 # :warning: Help & Support
 
