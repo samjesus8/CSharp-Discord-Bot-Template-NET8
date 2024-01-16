@@ -6,15 +6,16 @@
 
 # :wave: Welcome
 - This is the NET 8 version of the original [Template Repository](https://github.com/samjesus8/CSharp-Discord-Bot-Template). This should allow you to create a Discord Bot whilst utilising the benefits of NET Core 8.
+ 
 - This repository acts as a template for people wanting to create their own Discord Bot using C# along with the DSharpPlus library
 
 - This template was created by SamJesus8, who has a Tutorial on how to make a 100% functioning Discord Bot
 in C#, with many of the different features it can offer. Please watch this tutorial to understand more about what you can do.
 
-- Watch the Series here -> [C# Discord Bot Tutorial](https://www.youtube.com/playlist?list=PLcpUxmcrEm_Bn4K-kcE9ebsQPvNcR8KZx)
+- Watch the Series here -> [C# Discord Bot Tutorial](https://www.youtube.com/playlist?list=PLcpUxmcrEm_A819eppTt09S6EGVH99TSV)
 
 <p align="center">
-    <img src="https://media.discordapp.net/attachments/1020110665161113610/1142802011885150228/image.png" style="border:5px solid black" />
+    <img src="https://media.discordapp.net/attachments/1020110665161113610/1196549014947106836/image.png?ex=65b8081b&is=65a5931b&hm=5f49464c668a53aaa80985da32b0f872b42af245b834337880741d959636255a&=&format=webp&quality=lossless" style="border:5px solid black" />
 </p>
 
 # :speaking_head: Beginner's Advice from the Author
@@ -27,7 +28,7 @@ in C#, with many of the different features it can offer. Please watch this tutor
 
 - To use this repository correctly, please refer to the below article to get it setup and working
 
-[Repository Setup](https://github.com/samjesus8/CSharp-Discord-Bot-Template-NET7.0/blob/master/Docs/repository_setup.md)
+[Repository Setup](https://github.com/samjesus8/CSharp-Discord-Bot-Template-NET8/blob/master/Docs/repository_setup.md)
 
 # :warning: Help & Support
 
