@@ -1,115 +1,126 @@
-﻿# Setting up & using this Template
+﻿# Repository Setup
 
-This article will teach you how to use this Template and create your Discord Bot in a matter of seconds
+- This section will show you how to correctly use this Template Repository and get it setup and working
 
-## Step 1 - Creating your Bot
+## :one: Using the Template
 
-- The first thing you need to do is go to the [Discord Developer Portal](https://discord.com/developers/applications) and create an application
+This Repository is a template repository, so this allows you to copy over the existing files in this repository to your own
 
-![image](https://media.discordapp.net/attachments/1020110665161113610/1118917278357004399/image.png?width=1202&height=676)
+- First start by clicking on **"Use this Template" -> "Create a new repository"**
+- This will copy over the contents of this template to your own repository
+- This way, when you make commits, it will be made to your own repository rather than it attempting to make commits to the original repository
 
-- Create a new Application and a new Bot in this Application
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/98812930/224717857-749edc9e-57d7-49d3-bbc1-cacc5f963fe5.png" style="border:5px solid green" />
+</p>
 
-![image](https://media.discordapp.net/attachments/1020110665161113610/1118917495580000316/image.png?width=1440&height=401)
+## :two: Create your repository
 
-- Enable all three presence Intents in the Bot. This is an essential step as the code has been set to detect all 3 intents
+- Assign youself as the owner of this repository and give it a name & description
 
-![image](https://media.discordapp.net/attachments/1020110665161113610/1118917495840067604/image.png)
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/98812930/224718114-05016496-6dbb-48c7-8507-129f8390af18.png" style="border:5px solid green" />
+</p>
 
-## Step 2 - Creating a new Repository from this Template
+## :three: Clone the repository
 
-It is now time to clone this template into a new repository. DO NOT CLONE this repository because all that is doing is creating
-a clone of this template which you cannot commit changes to. You must create a new repo by using this template.
+- Open up VS 2022 or any other IDE and clone your repository so you can start coding in it
 
-- Click on the "Use this Template" button and create a new repository
+<p align="center">
+    <img src="https://imgur.com/5iCaxnC.png" style="border:5px solid green" />
+</p>
 
-![image](https://media.discordapp.net/attachments/1020110665161113610/1118918225871257680/image.png)
+- In the URL box, copy and paste the URL of your repository, it can be found by clicking on **"Code"**, and then copying the link in the **HTTPS** section
 
-- Assign yourself as the owner and give your repository a name and description. You can choose to make it Public/Private if you want
+- You can alternatively sign-in to GitHub on VS 2022 and select your repository
 
-![image](https://media.discordapp.net/attachments/1020110665161113610/1118918226202599586/image.png)
+## :four: Preparing the Project
 
-- Once this is done, you should have a new Repository that looks just like the template, as shown in this example
+Once you have cloned the repository, we have to do 2 things before it is ready:
 
-![image](https://media.discordapp.net/attachments/1020110665161113610/1118919492567826493/image.png?width=1130&height=676)
-
-## Step 3 - Cloning in VS2022
-
-- Once you have created your repository, you can now clone it in VS2022 or any preferred IDE in order to start coding in it
-
-![image](https://media.discordapp.net/attachments/1020110665161113610/1118920037936398396/image.png)
-
-- In the Solution Explorer, you should have your whole project fully loaded
-
-![image](https://media.discordapp.net/attachments/1020110665161113610/1118920312759783485/image.png)
-
-## Step 4 - Restoring NuGet Packages & the config.json file
-
-Once you have cloned the repository, it is not ready to start just yet. We have to do 2 things:
-
-1. Restore the NuGet Packages in this solution (DSharpPlus)
-2. Setting the Token/Prefix of the Bot
+1. **Restore the NuGet Packages in this solution (DSharpPlus)**
+2. **Setting the Token/Prefix of the Bot**
 
 ### Restoring the NuGet Packages
 
-This Discord Bot uses a package library called DSharpPlus, and after you clone a repository, the packages don't load in.
-So we need to **build** the project in order to load these packages in
+- To restore the NuGet packages, we have to simply **"Build"** the Solution
 
-![image](https://media.discordapp.net/attachments/1020110665161113610/1084643410834640916/image.png?width=568&height=402)
+- To do this, click on the **"Build"** tab at the top, and then select **"Build Solution"**
 
-After building, if you see **1 Succeeded** in the output, it means that everything went well
+<p align="center">
+    <img src="https://imgur.com/FBx6qE7.png" style="border:5px solid green" />
+</p>
 
-![image](https://media.discordapp.net/attachments/1020110665161113610/1084643742306283560/image.png?width=1370&height=212)
+- Once it is finished, it will generate a **/bin** folder for us in your solution folder, which will contain the application we are running when we hit **"Start" (YourSolution.exe)**. This **.exe** file is your actual console application
+
+- In this folder, we must place in our **config.json** file which will contain our **Token & Prefix**
 
 ### The config.json file
 
-This json file is what actually contains the Token & Prefix for your Bot. When the bot starts up, it will attempt to read this file
-and retrieve the Token & Prefix in order to set it in the bot configuration. So you must provide a valid token & prefix in this file
+- In order for the Bot to be able to communicate with Discord's client, we need to tell the program to connect using a Token, which we get through the **Discord Developer Portal** in the **Bot** section. 
+- You can do this by editing the `config.json` file and inputting your bot's token, and then a prefix of your choice
 
-![image](https://media.discordapp.net/attachments/1020110665161113610/1084644674330959993/image.png?width=1431&height=263)
-*The token in this picture is just for example purposes, it is not valid*
+```json
+***config.json***
 
-We must then copy this file over to the **/bin/Debug** folder of your project, which is actually the folder where your application is actually stored
+{
+    "token":"ENTER-YOUR-TOKEN-HERE",
+    "prefix":"ENTER-YOUR-PREFIX-HERE"
+}
+```
 
-So open your project in the File Explorer by right clicking on your Project name in the solution
+- Next, you need to copy this file to the build output folder of your project. Open up your project in your File Manager by right-clicking on your project name and clicking **"Open Folder in File Explorer"**
 
-![image](https://media.discordapp.net/attachments/1020110665161113610/1084644674591010826/image.png?width=353&height=663)
+<p align="center">
+    <img src="https://imgur.com/nHT0gar.png" style="border:5px solid green" />
+</p>
 
-Copy your config.json file in the Config Folder and then paste it into the **/bin/Debug** folder
+- You will see a folder called **"bin"**, open this folder and open the **"Debug"** folder. This is where you need to copy the config.json file to
 
-![image](https://media.discordapp.net/attachments/1020110665161113610/1084644674825900052/image.png?width=977&height=625)
+<p align="center">
+    <img src="https://imgur.com/AA1OuKr.png" style="border:5px solid green" />
+</p>
 
-## Pushing a commit to your repo
+### NOTE: WHEN PUSHING CHANGES TO YOUR REPO
 
-After you do this, to prevent your token from resetting, you must get rid of the token in your config.json file IN THE CONFIG FOLDER.
-The one you pasted in the **/bin/Debug** folder should remain untouched
+- If you push this to your own repository, bear in mind, Discord will automatically detect that your Bot token has been published online and it will reset your Token
+
+- So in order to keep your Bot running or if you need to change the token, all you need to do is ***change the config.json file in your /bin/Debug folder and NOT the one in your solution***
 
 ### config.json in /bin/Debug
 
-![image](https://media.discordapp.net/attachments/1020110665161113610/1084646160448372776/image.png?width=1284&height=141)
-This should contain your actual token
+<p align="center">
+    <img src="https://imgur.com/42McExa.png" style="border:5px solid green" />
+</p>
+
+*This should contain your actual token*
 
 ### config.json in Solution
-![image](https://media.discordapp.net/attachments/1020110665161113610/1084646160674861136/image.png?width=392&height=147)
 
-When you make a commit and push it to the repository, doing this will prevent Discord from auto-resetting your token again
+<p align="center">
+    <img src="https://imgur.com/obiGhPd.png" style="border:5px solid green" />
+</p>
 
-You should never commit your /bin/Debug folders when you push to the repository as they contain your actual application
+*The file should be untouched in the Config folder when you cloned this repository*
 
-## Final Step - Starting up the Bot
+- When you make a commit and push it to the repository, doing this will prevent Discord from auto-resetting your token again
+- You should never commit your **/bin/Debug** folders when you push to the repository as they contain your actual application
+- The **gitignore** should avoid this automatically for you so you don't have to worry about this
 
-Once you have Restored the Packages and setup the config.json file with your own Token & Prefix, you are 
+## :five: Starting up the Bot
+
+- Once you have Restored the Packages and setup the config.json file with your own Token & Prefix, you are 
 ready to go
 
-Start the application up and you should have a nice console window with your Bot
+- Start the application up and you should have a nice console window with your Bot running
 
-![image](https://media.discordapp.net/attachments/1020110665161113610/1084647592358584401/image.png?width=1311&height=663)
+<p align="center">
+    <img src="https://imgur.com/RQumyIu.png" style="border:5px solid green" />
+</p>
 
-You can then start coding your commands and taking over from here on
-
-# For more help
+# :hammer_and_wrench: Help & Support
 
 If you need extra help with this Bot then here are some recommended support links
 
-- Join the Discord Server | [samjesus8 Official Server](https://discord.com/invite/GrcaGNSfCR)
-- Join the Official DSharpPlus Server | [DSharpPlus Official Server](https://discord.com/invite/dsharpplus)
+- **Join the Discord Server** | [samjesus8 Official Server](https://discord.com/invite/GrcaGNSfCR)
+- **Join the Official DSharpPlus Server** | [DSharpPlus Official Server](https://discord.com/invite/dsharpplus)

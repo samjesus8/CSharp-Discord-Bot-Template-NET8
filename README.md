@@ -1,6 +1,6 @@
 ﻿# C# Discord Bot Template (.NET 8)
 
-![image](https://media.discordapp.net/attachments/1020110665161113610/1151881716894543893/discord_bot_tutorial_logo_2023.png?ex=651ace72&is=65197cf2&hm=87e25be49a8c55f8828e0ef5a80f6d92acc90bac2342858e357266426789867d&=)
+![image](https://imgur.com/orKLJEx.png)
 
 ## ***THIS IS THE NET 8 VERSION OF THE ORIGINAL TEMPLATE REPOSITORY***
 
@@ -15,7 +15,7 @@ in C#, with many of the different features it can offer. Please watch this tutor
 - Watch the Series here -> [C# Discord Bot Tutorial](https://www.youtube.com/playlist?list=PLcpUxmcrEm_A819eppTt09S6EGVH99TSV)
 
 <p align="center">
-    <img src="https://media.discordapp.net/attachments/1020110665161113610/1196549014947106836/image.png?ex=65b8081b&is=65a5931b&hm=5f49464c668a53aaa80985da32b0f872b42af245b834337880741d959636255a&=&format=webp&quality=lossless" style="border:5px solid black" />
+    <img src="https://imgur.com/OmdLEsh.png" style="border:5px solid black" />
 </p>
 
 # :speaking_head: Beginner's Advice from the Author
